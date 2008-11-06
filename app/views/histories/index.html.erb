@@ -1,0 +1,29 @@
+
+<div id="top">
+<h2>Listing histories</h2>
+<table class="recent" style="font-size:1em;">
+              <tr>
+                      <th>History ID</th>
+                      <th>Account</th>
+                      <th>Consultant</th>
+                      <th>Start_time</th>
+                      <th>End_time</th>
+	       </tr>
+
+    <% @histories.each do |history| %>
+			<tr>
+				<td class="small"><%=history.id%></td>
+				<td><%=  history.account.name rescue "not found"%></td>
+				<td><%=  history.consultant.name rescue "not found"%></td>
+				<td><%= history.start_time %></td>
+				<td><%= history.end_time %></td>
+                        </tr>
+			
+<% end %>
+
+                         <tr><td colspan="5"><%= will_paginate @histories %></td></tr>
+                         <tr><td colspan="5"><%= link_to 'Back to Rescue Desk', accounts_path %></td></tr>
+</table>
+<!--<%= button_to 'Destroy all histories',remove_all_histories_path , :confirm=>'Are you sure?' %>-->
+</div>
+

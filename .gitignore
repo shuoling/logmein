@@ -1,0 +1,6 @@
+log/production.log
+log/development.log
+*.log
+db/*.sqlite3
+schema.rb
+public/images/*.*

@@ -1,0 +1,11 @@
+digraph x {
+Account
+Account -> History [label=has_many]
+Account -> Consultant [label=belongs_to]
+Consultant
+Consultant -> Account [label=has_one]
+Consultant -> History [label=has_one]
+History
+History -> Account [label=belongs_to]
+History -> Consultant [label=belongs_to]
+}

@@ -1,0 +1,39 @@
+<div id="top">
+<% form_tag  clear_accounts_accounts_path do %>
+<h2>Account list</h2>
+<table class="recent" style="font-size:1em;">
+<tr>
+<th>Free</th>
+<th>Status</th>
+<th>Consultant</th>
+<th>Account</th>			
+<th>Start time</th>
+</tr>
+<% @account_list.each do |acc| %>
+<% if acc.in_use? %>
+<tr class="in_use" >				
+<td class="red" style="background-color:#fbfeff;"><%= check_box_tag  "account_list[]", acc.id %></td>
+<td class="red" style="background-color:#fbfeff;">In use</td>
+<td class="red" style="background-color:#fbfeff;"><%= acc.consultant.name rescue nil %></td>
+<td class="red" style="background-color:#fbfeff;"><%=acc.name%></td>
+<td class="red" style="background-color:#fbfeff;"><%= acc.start_time rescue nil %></td>
+</tr>
+<% else %>
+<tr class="green" >
+<td>N/A</td>
+<td>Free</td>
+<td><%= acc.consultant.name rescue nil %></td>
+<% if @can_use_direct %>
+<td><%= link_to acc.name, pick_consultant_account_path(acc),:target=>"_blank" %></td>
+<% else %>
+<td ><%= link_to acc.name, account_path(acc) %></td>
+<% end %>
+<td><%= acc.start_time rescue nil %></td>
+</tr>
+<% end %>
+<% end %>	
+<tr><td class="button" colspan="5"><%= submit_tag "Free Account" %></td></tr>
+</table>
+<%= will_paginate @account_list %>
+<% end %>
+</div>

@@ -1,0 +1,56 @@
+<div id="top">
+	<% form_tag  delete_consultants_admincons_path do %>
+	<table class="recent" style="font-size:1em;">
+		<h2>Consultant List</h2>
+		<tr>
+			<th>Delete</th>
+			<th>Consultant Name</th>
+			<th>Edit</th>
+			
+		</tr>
+
+		<% @con_list.each do |con| %>
+                  <tr>
+                          <td class="small"> <%= check_box_tag  "con_list[]", con.id %></td>
+                          <td><%= con.name %></td>
+                          <td><%= link_to 'Edit', edit_admincon_path(con) %></td>
+                  </tr>	
+		<% end %>
+                
+		<tr> 
+                    <td><span><%= submit_tag "Submit" %></span></td>
+		</tr>
+
+		<tr>
+		    <td colspan="3"><%= will_paginate @con_list %></td>
+                </tr>
+
+                <tr>
+                    <td colspan="6"><%= link_to 'Back to Rescue Desk', accounts_path %></td>
+                </tr>
+            <% end %>
+       </table>
+</div>
+
+<div id="bottom">
+          <% form_for :consultant, :url => admincon_path(@consultant) , :html => {:method => :put}  do |f| %>
+          <%= error_messages_for :consultant %>
+          <h2>Edit consultant </h2>
+  <table class="recent" style="font-size:1em;">
+            <tr>
+               <th><label for="name">Account Name</label></th>
+               <td><%= f.text_field :name %></td>
+            </tr>
+
+            <tr>
+                <td colspan="2"><%= f.submit "Update" %></td>
+            </tr>
+        <% end %>
+            <tr>
+                <td colspan="2"> <%= link_to 'Back', admincons_path %></td>
+            </tr>
+ </table> 
+
+</div>
+
+

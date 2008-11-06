@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"><head>
+
+
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8"><title>Logmein Control</title>
+  
+<link href="test_files/stylesheet.css" media="screen" rel="stylesheet" type="text/css"></head><body>
+
+
+<p style="color: green;"></p>
+
+
+<div id="body">
+  <div id="banner">
+<h2 id="logo_text">Remote Rescue Support Desk</h2>
+   </div>
+
+<div id="menu_bar">
+  <table>
+      <tbody><tr>	
+        <td><a href="http://localhost:3000/accounts">Account list</a> </td>
+        <td><a href="http://localhost:3000/adminaccs">Account admin</a> </td>
+	<td><a href="http://localhost:3000/admincons">Consultant admin</a> </td>
+	<td><a href="http://localhost:3000/histories">Histories list</a> </td>
+      </tr>
+</tbody></table>
+</div>
+<div id="content">
+
+<div id="top">
+<h2>Listing histories</h2>
+<table>
+              <tbody><tr>
+                      <th>History ID</th>
+                      <th>Account</th>
+                      <th>Consultant</th>
+                      <th>Start_time</th>
+                      <th>End_time</th>
+	       </tr>
+
+    
+			<tr>
+				<td class="small">35</td>
+				<td>support10@transcendit.co.uk</td>
+				<td>Adam Kuznesof</td>
+				<td>Thu Apr 17 16:30:02 +0100 2008</td>
+				<td>Thu Apr 17 16:31:15 +0100 2008</td>
+                        </tr>
+			
+
+			<tr>
+				<td class="small">34</td>
+				<td>support10@transcendit.co.uk</td>
+				<td>Adam Kuznesof 1</td>
+				<td>Wed Apr 16 17:59:11 +0100 2008</td>
+				<td>Wed Apr 16 17:59:43 +0100 2008</td>
+                        </tr>
+			
+
+			<tr>
+				<td class="small">33</td>
+				<td>support10@transcendit.co.uk</td>
+				<td>Adam Kuznesof</td>
+				<td>Wed Apr 16 17:19:02 +0100 2008</td>
+				<td>Wed Apr 16 17:27:20 +0100 2008</td>
+                        </tr>
+			
+
+			<tr>
+				<td class="small">32</td>
+				<td>support8@transcendit.co.uk</td>
+				<td>Adam Kuznesof</td>
+				<td>Wed Apr 16 16:21:16 +0100 2008</td>
+				<td>Wed Apr 16 17:05:06 +0100 2008</td>
+                        </tr>
+			
+
+			<tr>
+				<td class="small">31</td>
+				<td>support8@transcendit.co.uk</td>
+				<td>Adam Kuznesof</td>
+				<td>Wed Apr 16 16:16:29 +0100 2008</td>
+				<td>Wed Apr 16 16:21:07 +0100 2008</td>
+                        </tr>
+			
+
+
+                         <tr><td colspan="5"><div class="pagination"><span class="disabled prev_page">« Previous</span> <span class="current">1</span> <a href="http://localhost:3000/histories?page=2" rel="next">2</a> <a href="http://localhost:3000/histories?page=3">3</a> <a href="http://localhost:3000/histories?page=2" class="next_page" rel="next">Next »</a></div></td></tr>
+                         <tr><td colspan="5"><a href="http://localhost:3000/accounts">Back to Rescue Desk</a></td></tr>
+</tbody></table>
+<form method="post" action="/histories/remove_all" class="button-to"><div><input onclick="return confirm('Are you sure?');" value="Destroy all histories" type="submit"><input name="authenticity_token" value="91a069497998add044631d91ec609e4b652571e4" type="hidden"></div></form>
+</div>
+
+
+</div>
+
+</div>

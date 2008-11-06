@@ -1,0 +1,27 @@
+<div id="top">
+<h2>Editing account</h2>
+<table class="recent" style="font-size:1em;">
+		<tr>
+			<th>Account ID</th>
+			<th>Account Name</th>
+			<th>Account Password</th>
+			<th>Edit</th>
+			<th>Delete</th>
+			
+		</tr>
+		
+        <% @acc_list.each do |acc| %>
+		<tr>
+			<td class="small"><%=acc.id%></td>
+			<td><%= acc.name %></td>
+			<td><%= acc.password %></td>
+			<td><%= link_to 'Edit', edit_adminacc_path(acc) %></td>	
+			<td><%= link_to 'Destroy' ,adminacc_path(acc), :confirm=>'Are you sure?', :method => :delete %></td>
+                </tr>
+                        
+	<% end %>  
+                <tr><td colspan="5"><%= will_paginate @acc_list %></td></tr>
+		<tr><td colspan="5"><%= link_to 'Back to Rescue Desk', accounts_path %></td></tr>
+                
+</table>
+</div>

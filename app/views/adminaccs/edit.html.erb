@@ -1,0 +1,23 @@
+<%= render :partial => "accounts_list" %>
+<div id="bottom">
+    <% form_for :account, :url => adminacc_path(@account),:html => {:method => :put} do |f| %>
+        <h2>Edit Accounts</h2>
+        <table class="recent" style="font-size:1em;">
+            <tr>
+                  <th><label for="namet">Account Name</label></th>
+                  <td><%= f.text_field :name %></td>
+            </tr>
+            <tr>
+                  <th><label for="password">Password</label></th>
+                  <td><%= f.text_field :password %></td>
+            </tr>
+            <tr>
+                <td colspan="2"><%= f.submit "Update" %></td>
+            </tr>
+        </table>
+    <% end %>
+    <%= link_to 'Back to Account admin', adminaccs_path %>
+    <%= error_messages_for :account %>
+</div>
+
+

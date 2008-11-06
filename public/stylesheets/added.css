@@ -1,0 +1,16 @@
+.in_use{background:#E6EEEE;}
+
+td.red {color: red;}
+
+.green{color:green;}
+
+A:link {color: green; text-decoration: none}
+A:visited {color: green; text-decoration: none}
+A:active {color: green; text-decoration: none}
+A:hover {color: red;}
+
+#consultant{background-color:LightCoral}
+
+#footer A:visited {color: white; text-decoration: none}
+#footer A:active {color: white; text-decoration: none}
+#footer A:hover {color: white; color: white;}

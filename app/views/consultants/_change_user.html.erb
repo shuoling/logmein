@@ -1,0 +1,8 @@
+<%#
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+%>
+<% form_for :consultant ,:url=>change_user_consultants_path do |f| %>
+  <%= f.collection_select(:consultant_id, @consultant_list, :id, :name) %>
+  <%= submit_tag "Is me" %>
+<% end %>

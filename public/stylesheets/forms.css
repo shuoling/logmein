@@ -1,0 +1,229 @@
+/* Buttons */
+
+#sidebar a.edit_forum_btn{
+    background-image: url('../images/sb_edit_forum.png');
+    height:50px;
+    width:200px;
+    display:block;
+    background-color:LightCoral;
+    margin-left:5px;
+}
+
+#sidebar a.add_forum_btn{
+    background-image: url('../images/sb_add_forum.png');
+    height:50px;
+    width:200px;
+    display:block;
+    background-color:LightCoral;
+    margin-left:5px;
+}
+
+#sidebar a.create_login_btn{
+    background-image: url('../images/sb_create_login.png');
+    height:50px;
+    width:200px;
+    display:block;
+    background-color:LightCoral;
+    margin-left:5px;
+}
+#sidebar a.edit_login_btn{
+    background-image: url('../images/sb_edit_login.png');
+    height:50px;
+    width:200px;
+    display:block;
+    background-color:LightCoral;
+    margin-left:5px;
+}
+#sidebar a.disable_login_btn{
+    background-image: url('../images/sb_disable_login.png');
+    height:50px;
+    width:200px;
+    display:block;
+    background-color:LightCoral;
+    margin-left:5px;
+}
+#sidebar a.enable_login_btn{
+    background-image: url('../images/sb_enable_login.png');
+    height:50px;
+    width:200px;
+    display:block;
+    background-color:LightCoral;
+    margin-left:5px;
+}
+#sidebar a.delete_contact_btn{
+    background-image: url('../images/sb_delete_contact.png');
+    height:50px;
+    width:200px;
+    display:block;
+    background-color:LightCoral;
+    margin-left:5px;
+}
+
+#sidebar a.delete_organisation_btn {
+    background-image: url('../images/sb_delete_organisation.png');
+    height:50px;
+    width:200px;
+    display:block;
+    background-color:LightCoral;
+    margin-left:5px;
+}
+
+#sidebar a.add_organisation_btn {
+    background-image: url('../images/sb_add_organisation.png');
+    height:50px;
+    width:200px;
+    display:block;
+    background-color:LightCoral;
+    margin-left:5px;
+}
+
+#sidebar a.add_contact_btn {
+    background-image: url('../images/sb_add_contact.png');
+    height:50px;
+    width:200px;
+    display:block;
+    background-color:LightCoral;
+    margin-left:5px;
+}
+
+#sidebar a.add_new_btn {
+    background-image: url('../images/sb_add_new.png');
+    height:50px;
+    width:200px;
+    display:block;
+    background-color:LightCoral;
+    margin-left:5px;
+}
+
+#sidebar a.add_organisation_btn:hover, 
+#sidebar a.edit_organisation_btn:hover, 
+#sidebar a.add_contact_btn:hover,
+#sidebar a.edit_contact_btn:hover,
+#sidebar a.delete_organisation_btn:hover,
+#sidebar a.delete_contact_btn:hover,
+#sidebar a.add_new_btn:hover,
+#sidebar a.create_login_btn:hover,
+#sidebar a.edit_login_btn:hover,
+#sidebar a.enable_login_btn:hover,
+#sidebar a.disable_login_btn:hover,
+#sidebar a.add_forum_btn:hover,
+#sidebar a.edit_forum_btn:hover{
+    background-color:LightCoral;
+    margin-left:5px;
+}
+#sidebar a.edit_organisation_btn {
+    background-image: url('../images/sb_edit_organisiation.png');
+    height:50px;
+    width:200px;
+    display:block;
+    background-color:LightCoral;
+    margin-left:5px;
+}
+#sidebar a.edit_contact_btn {
+    background-image: url('../images/sb_edit_contact.png');
+    height:50px;
+    width:200px;
+    display:block;
+    background-color:LightCoral;
+    margin-left:5px;
+}
+a.add_comment_btn{
+    background-image: url('../images/sb_add_comment.png');
+    height:50px;
+    width:200px;
+    display:block;
+}
+#add_site_link {
+  text-align:center;
+  padding-top:100px;
+  min-height:150px;
+}
+
+.add_new_site {
+    padding: 10px 10px 10px 45px;
+    background-image: url('../images/add_32.png');
+    background-repeat:no-repeat;
+    background-position:5% 90%;
+}
+
+
+.form_data {margin-bottom:1.5em;width:100%;display:block;}
+ 
+.divider{border-bottom:5px solid #f2f2f2;height:1px;}
+ 
+h3.label{
+    width:100%;
+    font-weight:normal;
+    margin-top: 1em;
+    margin-bottom:0.2em;
+}
+.form_data .item_name {
+    width:99.5%;
+    padding:3px 0;
+    font-size:138.5%;
+    color:#333;
+    border:1px solid grey;
+}
+.search_field{
+  padding: 5px 2px;
+  color:sienna;
+  border:3px solid BurlyWood;
+  font-size:138.5%;
+}
+.form_data .item_description{
+    width:99.5%;
+    padding:3px 0;
+    color:#333;
+    font-size:116%;
+}
+
+.form_data .file_upload{
+    padding:3px 0;
+    color:#333;
+    font-size:116%;
+}
+
+.form_data .select_box {
+    padding:3px 0;
+    color:#333;
+    font-size:116%;
+    width:90%
+}
+
+input.address_box {
+    width:97%;
+    padding:3px 0;
+    color:#333;
+    margin-bottom:0.2em;
+    background-repeat:no-repeat;
+    background-position:95% center;
+    border-style:solid;
+    border-width:1px;
+    font-size:116%;
+}
+
+.address_1 {background-image: url('/images/text_boxes/address_line_1.png');}
+.address_2 {background-image: url('/images/text_boxes/address_line_2.png');}
+.address_3 {background-image: url('/images/text_boxes/address_line_3.png');}
+.address_town {background-image: url('/images/text_boxes/town.png');}
+.address_county {background-image: url('/images/text_boxes/county.png');}
+.address_postcode {background-image: url('/images/text_boxes/postcode.png');}
+.address_country {background-image: url('/images/text_boxes/country.png');}
+.address_name {background-image: url('/images/text_boxes/address_name.png');}
+.address_telephone {background-image: url('/images/text_boxes/telephone.png');}
+.address_fax {background-image: url('/images/text_boxes/fax.png');}
+.address_mileage {background-image: url('/images/text_boxes/mileage.png');}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

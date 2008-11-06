@@ -1,0 +1,21 @@
+<%= render :partial => "accounts_list" %>
+<div id="bottom">
+    <% form_for :account, :url => adminaccs_path do |f| %>
+    <h2>Create Account</h2>
+    <table class="recent" style="font-size:1em;">
+        <tr>
+            <th><label for="name">Account Name</label></th>
+            <td><%= f.text_field :name, :size => 30 %></td>
+        </tr>
+        <tr>
+            <th >Account Password</th>
+            <td><%= f.text_field :password, :size => 30 %></td>
+        </tr>
+        <tr>
+            <th >Submit</th>
+            <td><%= f.submit "Create account" , :class=> "submit" %></td>
+        </tr>
+    </table>
+    <%= error_messages_for :account %>
+    <% end %>
+</div>

@@ -1,0 +1,2 @@
+module AdminconHelper
+end

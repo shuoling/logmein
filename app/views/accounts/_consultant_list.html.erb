@@ -1,0 +1,22 @@
+<% content_for :refresh do %>
+    <META HTTP-EQUIV="Refresh" CONTENT="300">
+<% end %>
+<% unless @account.in_use? %>
+    <% content_for :consultants do %>
+        <div id="consultant" STYLE="padding-top:10px;padding-bottom:10px;" class="rounded {10px}">
+            
+            <% form_for :account,:url => assign_consultant_account_path(@account), :html => {:target => "_blank"} do |f|%>
+                <div class="center_text">
+                    <p style="color:white;"><%= @account.name %></p>
+                    <%= image_submit_tag "sb_assign.png" %>
+                </div>
+                <div style="margin-left:25%;width:20px;">
+                    <%= f.collection_select(:consultant_id, @consultant_list, :id, :name) %>
+                </div>
+            <% end %>
+        </div>
+    <% end %>
+<% else %>
+  <% flash[:notice]= "The account is currently in use" %>
+<% end %>
+

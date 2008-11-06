@@ -1,0 +1,111 @@
+body
+{
+	background:#E6EEEE url(images/bg.gif) repeat-x scroll 0%;
+        color:#333333;
+        font-family:"Lucida Sans Unicode",Tahoma,Geneva,sans-serif;
+        font-size:78%;
+        text-align:center;
+}
+
+#body
+{
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;
+	width:760px;
+	background-attachment: scroll;
+	background-color: #FFFFFF;
+	background-image: url(../images/content.gif);
+	background-repeat: repeat-y;
+	background-position: 0%;
+      
+  }
+
+#banner
+{    
+     height:120px;
+     background:#ffffff;
+     background: url(/images/header.gif);
+     background-repeat: no-repeat;
+}
+
+#content
+{
+  
+    
+}
+
+#top, #bottom
+{ 
+	width:730px;
+	text-align:center;
+        postion:absolute;
+        left:30px;
+        
+       
+}
+#menu_bar
+{
+    background: url(images/content.gif);
+}
+
+h1 
+{
+    font-size:2em;
+    line-height:40px;
+}
+#logo_text
+{
+    padding-top: 80px;
+    padding-left: 200px;
+    color:#59708C;
+}
+
+table
+{
+	width:710px;
+	border-bottom-style:solid;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 14px;
+	font-style: normal;
+	color: #999999;
+	background-color: #FFFFFF;
+	text-align:center;
+	position: relative;
+	visibility: inherit;
+	left: 10px;
+}
+
+.left_align
+{
+text-align:left;
+}
+
+.button
+{float:left;}
+
+.small
+{
+
+width:100px}
+
+
+.delete_button
+{
+	float:left;
+}
+
+.red
+{
+    color: red;
+}
+
+.green
+{
+    color:green;
+}
+
+A:link {color: green; text-decoration: green}
+A:visited {color: green; text-decoration: none}
+A:active {color: green; text-decoration: none}
+A:hover {color: green; color: red;}

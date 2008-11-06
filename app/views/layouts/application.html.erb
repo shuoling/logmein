@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <meta http-equiv="refresh" content="600" >
+  <title>Logmein Control</title>
+<%= javascript_include_tag 'onMouseColorChange.js' %>
+    <%= stylesheet_link_tag "reset-min" , :media => "all" %>
+    <%= stylesheet_link_tag "fonts-min" , :media => "all" %>
+    <%= stylesheet_link_tag "grids-min" , :media => "all" %>
+    <%= stylesheet_link_tag "base-min" , :media => "all" %>
+    <%= stylesheet_link_tag "forms" , :media => "all" %>
+    <%= stylesheet_link_tag "layout" , :media => "all" %>
+    <%= stylesheet_link_tag "styles" , :media => "all" %>
+    <%= stylesheet_link_tag "added" , :media => "all" %>
+    <%= javascript_include_tag :defaults %>
+    <%= javascript_include_tag "jquery.corners.js" %>
+    <%= javascript_include_tag  "jquery.autocomplete.js" %>
+    <%= javascript_include_tag  "jquery.selectboxes.js" %>
+    <%= stylesheet_link_tag "jquery.autocomplete" %>
+<%= yield :head %>
+<%= yield :refresh %>
+
+ <style type="text/css">
+      #custom-doc { width: 98%; min-width: 250px; max-width:1200px; }
+    </style>
+  </head>
+
+<body>
+  <div id="organisation_links">
+ </div>
+
+<div id="custom-doc" class="yui-t5 rounded {15px}" style="background-color:#ffffff;padding:15px 10px;">
+     <div id="hd">
+         <div id="header">
+              <div id="logo">
+
+              <%= link_to(image_tag('/images/logo.png'),"http://helios") %>
+              </div>
+              <div id="header_right">
+                  <div id="user-bar-greeting">
+                    <% unless session[:current_user].nil? %>
+                      Login as: <%= session[:current_user] %> |
+                      <%= link_to 'Not you?', consultants_path  %> |
+                      <%= link_to 'Logout',clear_session_accounts_path   %>
+                    <% end %>
+                  </div>
+              </div>
+          </div>
+    
+     </div>
+     <div id="bd">
+          <div id="yui-main">
+              <div class="yui-b">
+                  <% #FIXME: Perhaps make a modular yeild block like comment and tickets instead %>
+                  <% unless @no_main_section %>
+                    <div id="content" class="rounded {8px}">
+                        <div id="banner">
+                            <div id="main_banner_right">
+                              <%= yield :status  %>
+                            </div>
+                            <div id="main_banner_left">
+
+                            </div>
+                            <div class="clear"> </div>
+                        </div>
+                        <div id="main">
+                          <%= yield %>
+                        </div>
+                    </div>
+                  <% else %>
+                      <div style="height:6px;"></div>
+                  <% end %>
+              </div>
+          </div>
+
+          <div class="yui-b">
+            <%= show_flash %>
+                   <div id="sidebar" class="rounded {10px}">
+                   <li><%= link_to image_tag("sb_home.png"), accounts_path  %></li>
+                   <li><%= link_to image_tag("sb_accounts.png"),adminaccs_path %></li>
+                   <li><%= link_to image_tag("sb_consultants.png"),admincons_path %></li>
+                   <li><%= link_to image_tag("sb_history.png"),histories_path %></li>
+                 </div>
+                  <%= yield :consultants   %>
+             </div>
+      </div>
+      <div id="bottom_clear"></div>
+  </div>
+
+  <div id="footer">
+      <p>Developed by transcendit<p>
+  </div>
+
+</body>
+</html>

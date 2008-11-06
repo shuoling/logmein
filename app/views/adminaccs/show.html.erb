@@ -1,0 +1,44 @@
+<div id="top">
+    <table class="recent" style="font-size:1em;">
+        <h2>Account_List</h2>
+        <tr>
+            <th>Delete</th>
+            <th>Account ID</th>
+            <th>Account Name</th>
+            <th>Account Password<th>
+            <th>Edit</th>
+        </tr>
+        <% @acc_list.each do |acc| %>
+            <tr>
+                <td class="small"> <%= check_box_tag  "acc_list[]", acc.id %></td>
+                <td class="small"><%=acc.id%></td>
+                <td><%= acc.name %></td>
+                <td><%= acc.password %></td>
+                <td calss="button" colspan=4><%= submit_tag "Edit Account" %></td>
+            </tr>
+        <% end %>
+        <tr>
+                <td colspan="6"><span class="delete_button"><%= submit_tag "Delete Accounts" %></span></td>
+        </tr>
+        <tr>
+                <td colspan="5"><%= will_paginate @account_list %></td>
+        </tr>
+        <tr>
+                <td colspan="5"><%= link_to 'Back to rescue desk', accounts_path %></td>
+        </tr>
+    </table>
+    <table class="left_align" width="500" border="0" cellspacing="2" cellpadding="2">
+        <h2>Create Account</h2>
+        <tr>
+            <th class="small">Account Name</th>
+            <td>Input the name</td>
+        </tr>
+        <tr>
+            <th class="small">Account Password<th>
+        </tr>
+        <tr>
+            <th class="small">Submit</th>
+            <td><%= submit_tag "Create" %></td>
+        </tr>
+    </table>
+</div>
